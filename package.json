@@ -1,0 +1,48 @@
+{
+  "name": "vite-federation",
+  "version": "1.0.0",
+  "type": "commonjs",
+  "description": "Cmd tool to control pnpm monorepo with Vite and module federation.",
+  "bin": {
+    "vite-federation": "./bin/vite-federation"
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [
+    "Vite",
+    "pnpm",
+    "monorepo",
+    "module",
+    "federation",
+    "parallel",
+    "concurrent",
+    "dev",
+    "run",
+    "tool",
+    "cmd"
+  ],
+  "author": "Roman Jámbor",
+  "license": "MIT",
+  "dependencies": {
+    "@pnpm/find-workspace-packages": "^6.0.9",
+    "chalk": "^4.1.2",
+    "commander": "^11.1.0",
+    "fast-glob": "^3.3.1",
+    "micromatch": "^4.0.5",
+    "yaml": "^2.3.2"
+  },
+  "devDependencies": {
+    "@types/micromatch": "^4.0.3",
+    "@types/node": "^20.8.5",
+    "prettier": "^3.0.3",
+    "rimraf": "^5.0.5",
+    "typescript": "^5.2.2"
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "dist/**/*.js",
+    "bin/vite-federation"
+  ]
+}
