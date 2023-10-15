@@ -8,8 +8,6 @@ vite-federation -h
 
 When you run some command, you can stop it with `Ctrl+C`; all spawned processes will be killed.
 
-Order of projects is determined from the order of patterns in the command then by the order of packages inside pnpm-workspace.yaml file.
-
 ## Example
 ```shell
 vite-federation serve --host @myapp/host --remotes @myapp-modules/* --libs @myapp-libs/*
@@ -39,3 +37,9 @@ Host does/should not use this served modules. HMR will not work with this. You s
 **Host**
 \
 The host is executed as `vite dev` after libraries and remotes.
+
+> Order of projects is determined from the order of patterns in `vite-federation` command then by the order of packages inside pnpm-workspace.yaml file.
+
+
+## Example project
+See [this](https://github.com/Hookyns/examples-pnpm-vite-module-federation-solidjs) repository. It is a SolidJS application, using Vite and pnpm monorepo. HMR of remotes is fully working inside host application.
