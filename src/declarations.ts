@@ -9,4 +9,5 @@ export type CommandLineArguments = {
 	workspaceRootDir: string;
 	orderedProjects: string[];
 	projects: Project[];
+	hostProject: Project;
 };

@@ -57,11 +57,18 @@ export class CLI {
 			return proj;
 		}) as Project[];
 
+		const hostProject = projects.find((proj) => proj.manifest.name === opts.host);
+
+		if (!hostProject) {
+			throw new Error(`Host project '${opts.host}' not found in the workspace.`);
+		}
+
 		return {
 			workspaceRootDir: path.dirname(workspaceYmlPath),
 			orderedProjects: orderedProjects,
 			projects: projects,
 			host: opts.host,
+			hostProject: hostProject,
 			remotes: opts.remotes,
 			libs: opts.libs,
 		};
