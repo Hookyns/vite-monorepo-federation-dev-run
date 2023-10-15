@@ -1,10 +1,11 @@
 {
-  "name": "vite-federation",
+  "name": "vite-federate",
   "version": "1.0.0",
   "type": "commonjs",
   "description": "Cmd tool to control pnpm monorepo with Vite and module federation.",
   "bin": {
-    "vite-federation": "./bin/vite-federation"
+    "vite-federation": "./bin/vite-federation",
+    "vite-federate": "./bin/vite-federation"
   },
   "scripts": {
     "start": "tsc -w",
